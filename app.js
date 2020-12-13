@@ -13,6 +13,7 @@ app.get("/random/:max/:min", (req, res) => {
         res.status(400).json({
             error: "Bad request"
         })
+        return;
     }
     // Random number formula
     var result = Math.round((Math.random() * (max - min)) + min);
